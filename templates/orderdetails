@@ -1,0 +1,44 @@
+{% extends "navbar.html" %} {% block content %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ORDER DETAILS </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet " type="text/css " href="{% static 'orderdetails.css' %} "></link> -->
+
+
+    <body class="bg-img background-image:url({% static 'img\bgtable.jpg' %});">
+
+
+
+
+        <div class="name">
+            <h1>ORDER DETAILS :</h1>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $.get("http://127.0.0.1:8000/orderdetails/", {}).done(function(data) {
+                    $("#rest").html(data)
+                });
+            });
+        </script>
+        <div id="rest"></div>
+        <div class="button">
+
+            <a href="http://localhost:8000/index.html">
+                <button class="btn">BACK</button>
+            </a>
+
+        </div>
+    </body>
+
+
+
+</html>
+{% endblock %}
