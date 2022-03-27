@@ -1,0 +1,44 @@
+{% extends "navbar.html" %} {% block content %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}"></link>
+
+
+</head>
+
+<body class="bg-img background-image:url({% static 'img\bg3.jpg' %});">
+    <div class="flex-container">
+        <div class="hello">
+            <img src="{% static 'img/hi-dribbble-studiotale.gif' %}" class="bear">
+        </div>
+        <div class="login">
+        </div>
+        <h1>LOGIN</h1>
+        <p id="p1">Please enter your credentials to login.</p>
+
+        <form class="login-form" action="">
+            <input type="text" placeholder="username" />
+            <label for="name">Enter the Username</label>
+            <input type="password" placeholder="password" />
+            <button>Login</button>
+            <p class="message">Are you a customer?<a href="#"> customer login</a></p>
+            <p class="message1">Are you a new customer?<a href="#"> customer sign-up</a></p>
+        </form>
+
+
+
+
+
+    </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}
