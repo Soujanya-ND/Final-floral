@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(138, 143, 140);
+}
+
+.bg-img {
+    background-image: url("/static/img/bgc.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 200px 50px 200px;
+    background: rgb(195, 206, 209);
+    backdrop-filter: blur(12px);
+    border-radius: 80px 30px 30px 80px;
+    height: 600px;
+    box-shadow: 20px 20px 40px #353333, -20px -20px 40px #3f3c3cd3;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-item {
+    padding: 1em;
+    box-sizing: border-box;
+    height: 400px;
+    width: 50%;
+    display: flex;
+}
+
+.bear {
+    border-radius: 75px;
+    height: 559px;
+    width: 510px;
+}
+
+.login {
+    width: 50%;
+    margin-left: 10px;
+    align-content: center;
+    background-color: rgba(252, 246, 246, 0.2);
+    height: 600px;
+    border-radius: 50px;
+}
+
+.button {
+    background: #a34a81;
+    background-image: -webkit-linear-gradient(top, #ffffff, #c2b1ba);
+    background-image: -moz-linear-gradient(top, #f0d1e7, #f3d6ef);
+    background-image: -ms-linear-gradient(top, #e9e3e8, #fcfcfc);
+    background-image: -o-linear-gradient(top, #afafaf, #fcf0f9);
+    background-image: linear-gradient(to bottom, #c9c2c8, #f8f7f8);
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    text-shadow: 7px 2px 13px #828282;
+    -webkit-box-shadow: 7px 7px 10px #8c888c;
+    -moz-box-shadow: 7px 7px 10px #8c888c;
+    box-shadow: 7px -7px 10px #d6d6d681, 11px 7px 10px #8c888c94;
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    padding: 1px 10px 1px 10px;
+    text-decoration: lighter;
+    opacity: 0.8;
+    border: 0;
+    height: 70px;
+    width: 350px;
+    margin-left: 100px;
+}
+
+.button:hover {
+    background: #e4a0eb;
+    background-image: -webkit-linear-gradient(top, #d29ad4, #be99bd);
+    background-image: -moz-linear-gradient(top, #f190e9, #ccc7cb);
+    background-image: -ms-linear-gradient(top, #ff9eef, #e9e6e8);
+    background-image: -o-linear-gradient(top, #ff97fa, #f37ae3);
+    background-image: linear-gradient(to bottom, #f8b4e2, #f3b1dd);
+    color: rgb(0, 0, 0);
+    border: 0;
+    opacity: 1;
+    font-size: 32px;
+    padding: 07px 40px 07px 40px;
+    text-decoration: bold;
+}
+
+h2.pass {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    color: rgb(133, 128, 128);
+}
+
+#id01 {
+    background-color: #27232600;
+    background-attachment: fixed;
+}
+
+#dd.w3-modal-content {
+    width: 1000px;
+    background-color: #353333d5;
+}
+
+#dd.w3-container,
+.w3-padding-16 {
+    background-color: #353333b2;
+}

@@ -1,0 +1,143 @@
+    body {
+        background-color: rgb(138, 143, 140);
+    }
+    
+    .table {
+        width: 100%;
+    }
+    
+    .bg-img1 {
+        width: 100%;
+        background: linear-gradient(145deg, rgba(51, 50, 50, 0.452), rgba(34, 33, 33, 0.63)), url(/static/img/bgp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    h1.sear {
+        margin-top: 70px;
+        margin-left: 200px;
+        width: 550px;
+        font-size: 60px;
+        font-weight: bolder;
+        font-family: "Roboto", sans-serif;
+        color: transparent;
+        background-image: linear-gradient(145deg, #cfdb28, #722286, rgb(230, 212, 46), rgb(223, 194, 31), rgb(212, 40, 184));
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    
+    .w3-third {
+        padding-left: 100px;
+        padding-top: 20px;
+    }
+    
+    .wel {
+        text-align: center;
+        width: 500px;
+        height: 50px;
+        font-family: "Roboto", sans-serif;
+        font-size: 25px;
+        color: rgb(119, 110, 112);
+        border-radius: 20px;
+        outline: 0;
+    }
+    
+    .new {
+        padding-left: 200px;
+        color: rgb(39, 14, 19);
+        font-size: 28px;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    
+    h2 {
+        padding-left: 100px;
+        color: rgb(7, 6, 7);
+    }
+    
+    .w3-red {
+        padding-left: 40px;
+    }
+    
+    .i {
+        color: rgb(39, 5, 49);
+        text-align: center;
+    }
+    
+    #hel {
+        text-align: center;
+    }
+    
+    #ser {
+        width: 200px;
+        height: 60px;
+        background: #ccd3d8;
+        background-image: -webkit-linear-gradient((145deg, #cfdb28, #722286, rgb(230, 212, 46), rgb(223, 194, 31), rgb(212, 40, 184)));
+        background-image: -moz-linear-gradient((145, #cfdb28, #722286, rgb(230, 212, 46), rgb(223, 194, 31), rgb(212, 40, 184)));
+        background-image: -ms-linear-gradient((145, #cfdb28, #722286, rgb(230, 212, 46), rgb(223, 194, 31), rgb(212, 40, 184)));
+        background-image: -o-linear-gradient((145, #cfdb28, #722286, rgb(230, 212, 46), rgb(223, 194, 31), rgb(212, 40, 184)));
+        background-image: linear-gradient(to bottom, #dbcf28, #b19519, rgb(179, 165, 48), rgb(223, 194, 31), rgb(189, 192, 41));
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 35px;
+        padding: 5px 20px 10px 20px;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        left: 250px;
+    }
+    
+    #ser.btn:hover {
+        background: #ccd3d8;
+        background-image: -webkit-linear-gradient((145deg, #e9e9e6, #fbecff, rgb(230, 228, 213), rgb(223, 194, 31), rgb(97, 96, 97)));
+        background-image: -moz-linear-gradient((145, #dedfdc, #f1f1f1, rgb(221, 221, 217), rgb(240, 239, 234), rgb(122, 122, 122)));
+        background-image: -ms-linear-gradient((145, #c0c0b9, #ddd6df, rgb(221, 221, 219), rgb(218, 216, 209), rgb(109, 106, 108)));
+        background-image: -o-linear-gradient((145, #898a86, #e6e6e6, rgb(221, 220, 216), rgb(233, 233, 233), rgb(88, 88, 88)));
+        background-image: linear-gradient(to bottom, #db28cc, #a1178f, rgb(170, 15, 136), rgb(223, 31, 159), rgb(192, 41, 159));
+        text-decoration: none;
+        color: black;
+    }
+    
+    .w3-third {
+        padding-left: 15px;
+    }
+    
+    .table th {
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #363a385e;
+        color: white;
+    }
+    
+    h2.tit {
+        color: white;
+        text-align: center;
+        font-size: 35px;
+        padding-left: 480px;
+        width: 500px;
+    }
+    
+    .table td {
+        padding: 2px;
+        text-align: center;
+    }
+    
+    .table tr,
+    .table tr {
+        border: 1px solid rgb(59, 48, 48);
+        padding: 2px;
+    }
+    
+    .table tr:nth-child(even) {
+        background-color: #817b7b7e;
+    }
+    
+    .table tr:hover {
+        background-color: #ddd;
+    }
