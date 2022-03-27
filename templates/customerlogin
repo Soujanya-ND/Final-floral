@@ -1,0 +1,60 @@
+ {% block content %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Customer Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img\icons.png' %}" type="image/x-icon "></link>
+    <link rel="stylesheet" type="text/css" href="{% static 'customerlogin.css' %}"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<script>
+    $(document).ready(function() {
+        $("#forms").submit(function(e) {
+            e.preventDefault();
+            usname = $("#usname").val()
+            pswd = $("#pswd").val()
+                //alert(usname + pswd)
+            $.get("http://localhost:8000/ucustomerlogin", {
+                usname: usname,
+                pswd: pswd,
+            }).done(function(data) {
+                alert(data)
+                $("body").html(data)
+            });
+        });
+    });
+</script>
+
+<body class="bg-img background-image:url({% static 'img/bg5.jpg' %});">
+
+    <div class="flex-container">
+        <div class="hello">
+            <img src="{% static 'img/giph1.gif' %}" class="bear">
+        </div>
+        <div class="login">
+        </div>
+        <h1>LOGIN</h1>
+        <p id="p1">Please enter your credentials to login.</p>
+
+        <form id="forms" class="login-form" action="">
+            <input id="usname" type="text" placeholder="username" />
+            <label for="name">Enter the Username!</label>
+            <input id="pswd" type="password" placeholder="password" />
+            <button id="button1" type="submit">Login</button>
+            <p class="message1">Are you a new customer?<a href="http://localhost:8000/customersignin"> customer sign-up</a></p>
+            <p class="message1">forgot<a href="/cpass"> password ?</a></p>
+        </form>
+
+
+
+
+
+    </div>
+
+</body>
+{% endblock %}
