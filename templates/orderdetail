@@ -1,0 +1,22 @@
+<html>
+<h1 style="font-size: 35px;color:rgb(55, 86, 211);text-align:center;text-decoration: underline;">Details of Flower Ordered </h1>
+
+<hr>
+<table border=" 2pt " style="margin:0.02in;padding:0.02in;font-family: arial, sans-serif;border-collapse: collapse;
+width: 100%;">
+    <tr>
+        <th style="font-size: 15px;text-align: center;">Flower_ID</th>
+        <th style="font-size: 15px; text-align: center;">Customer Name</th>
+        <th style="font-size: 15px;text-align: center;">Flower Name</th>
+        <th style="font-size: 15px;text-align: center;">Total Price</th>
+    </tr>
+    <tr>
+        <td style="font-size: 15px;text-align: center;">{{ono}}</td>
+        <td style="font-size: 15px;text-align: center;">{{customer_name}}</td>
+        <td style="font-size: 15px;text-align: center;">{{flower_name}}</td>
+        <td style="font-size: 15px;text-align: center;">{{Total}}</td>
+    </tr>
+</table>
+<p style="margin-top:50px;align-content:center;color:red;font-size: 25px;text-align: center;">Thank you for ordering !</p>
+
+</html>
