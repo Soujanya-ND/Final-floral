@@ -1,0 +1,11 @@
+from django.contrib import admin
+from floral.models import flower,Service,employee,customer,looksafters,Order,uses
+
+# Register your models here.
+admin.site.register(flower)
+admin.site.register(Service)
+admin.site.register(employee)
+admin.site.register(customer)
+admin.site.register(looksafters)
+admin.site.register(Order)
+admin.site.register(uses)
