@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/static/img/forest-gb68dba043_1920.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 150px 200px 50px 200px;
+    background: linear-gradient(145deg, #3331314d, #36353573);
+    backdrop-filter: blur(12px);
+    border-radius: 80px 30px 30px 80px;
+    height: 750px;
+    box-shadow: 20px 20px 40px #252424e0, -20px -20px 40px #242222d3;
+    align-items: center;
+}
+
+form {
+    margin-top: 60px;
+    height: 950px;
+    top: 50px;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    left: 325px;
+    padding-top: 10px;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-size: 50px;
+    top: 10px;
+    width: 500px;
+    height: 80px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 20px;
+}
+
+label {
+    position: absolute;
+    top: 400px;
+    left: 40px;
+    width: 100%;
+    color: rgba(230, 230, 230, 0.219);
+    transition: 0.15s;
+    align-content: space-around;
+}
+
+.forms input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 5px 10px 10px rgba(37, 56, 12, 0.582), -5px -5px 10px rgba(132, 189, 58, 0.596);
+    border-radius: 15px;
+    width: 500px;
+    border: 0;
+    margin: 30px 350px 0px 320px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-bottom: 2px solid #b3b3b300;
+}
+
+.forms input:focus {
+    border-color: rgb(132, 189, 58);
+}
+
+.forms input:focus~label {
+    font-size: 16px;
+    color: rgb(28, 29, 31);
+}
+
+.button {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 200px;
+}
+
+.button button {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
+    width: 250px;
+    height: 60px;
+    margin-right: 30px;
+    border-radius: 46px;
+    color: black;
+    background: rgba(0, 0, 0, 0.253);
+    box-shadow: inset 9px 9px 18px #6e9c17, inset -9px -9px 18px #0b4d08;
+    border: 0;
+}
+
+.button button:hover {
+    background: #838380;
+    background-image: -webkit-linear-gradient(top, #111111, #2b2a28);
+    background-image: -moz-linear-gradient(top, #1d1d1c, #141413);
+    background-image: -ms-linear-gradient(top, #3a3a38, #2b2b2b);
+    background-image: -o-linear-gradient(top, #0c0c0b, #252524);
+    background-image: linear-gradient(to bottom, rgb(132, 189, 58), #57b419, #30881f);
+    color: rgb(255, 255, 255);
+    border: 0;
+    opacity: 1;
+    font-size: 32px;
+    text-decoration: bold;
+}
+
+.button button2 {
+    margin-left: 700px;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
+    width: 250px;
+    height: 60px;
+    border-radius: 46px;
+    color: black;
+    background: #e5dcdc;
+    box-shadow: inset 9px 9px 18px #d3caca, inset -9px -9px 18px #f7eeee;
+    border: 0;
+}
+
+.button button3 {
+    margin-left: 700px;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
+    width: 250px;
+    height: 60px;
+    border-radius: 46px;
+    color: black;
+    background: #e5dcdc;
+    box-shadow: inset 9px 9px 18px #d3caca, inset -9px -9px 18px #f7eeee;
+    border: 0;
+}
