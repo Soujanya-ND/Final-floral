@@ -1,0 +1,83 @@
+{% block content %} {% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#forms").submit(function(e) {
+            e.preventDefault();
+            usrname = $("#usrname").val()
+            psw = $("#psw").val()
+            address = $("#address").val()
+            email = $("#email").val()
+            Phone = $("#Phone").val()
+            if (usrname == '' || email == '' || psw == '' || address == '' || Phone == '') {
+                alert("Donot let the fields be empty")
+            } else {
+                //alert('Welcome !!' + usrname + 'You have signed in successfully ')
+                $.get("http://localhost:8000/ucustomersignin/", {
+                    usrname: usrname,
+                    psw: psw,
+                    address: address,
+                    email: email,
+                    Phone: Phone
+                }).done(function(data) {
+
+                    $("body").html(data)
+                });
+            }
+        });
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Customer_signin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img\icons.png' %}" type="image/x-icon "></link>
+    <link rel="stylesheet" type="text/css" href="{%static 'customersignin.css' %}"></link>
+
+</head>
+
+<body class="bg-img background-image:url({% static 'img\bgc.jpg' %});">
+
+    <div class="forms" action="">
+        <h1> SIGN - UP
+        </h1>
+        <p id="p1"> welcome to the world of
+            <span style="color: cornflowerblue;"> FLOWERS
+                                </span>
+        </p>
+        <p id="p2" style="top:35px; color:whitesmoke"> Already have an account ?
+            <a href="http://localhost:8000/customerlogin">
+                <span style="color:crimson;"> Login
+                    </span>
+            </a>
+        </p>
+        <form action="http://localhost:8000/customersignin/" id="forms" name="myforms" style=" width: 500px; height: 460px; margin-top: 10px; " action="/action_page.php" method="post">
+            <input id="usrname" name="usrname" type="text" placeholder="username ">
+            <br>
+            <input id="psw" type="password" placeholder="password" style="margin-top: 20px; ">
+            <br>
+            <input id="address" type="text" placeholder="Type you full address " style="margin-top: 30px; ">
+            <input id="email" type="email" placeholder="@gmail.com " style="margin-top: 20px; ">
+            <br>
+            <input id="Phone" type="number" placeholder="+91" style="margin-top: 30px; ">
+            <br>
+
+            <div class="button " style="margin-top: -25px; ">
+                <button id="button1 " type="submit"> SIGN - UP
+                    </button>
+                <button d="button2 " type="reset"> RESET
+                    </button>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
+{% endblock %}
