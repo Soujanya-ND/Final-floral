@@ -1,0 +1,35 @@
+
+from django.contrib import admin
+from django.urls import path
+from floral.views import greet,orderdetails,login,customerlogin,customersignin,index,products,services,ucustomersignin,ucustomerlogin,uservices,uorder,uproducts,sendSimpleEmail,getotp,cpass,changepass,uorders,msearch,search,usearch,searches
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns=[
+path('admin/',admin.site.urls),
+path('greet/',greet),
+path("orderdetails/",orderdetails,name="orderdetails"),
+path("login/",login,name="login"),
+path("customerlogin/",customerlogin,name="customerlogin"),
+path("customersignin/",customersignin,name="customersignin"),
+path("index/",index,name="index"),
+
+path("products/",products,name="products"),
+path("services/",services,name="services"),
+path('ucustomersignin/',ucustomersignin),
+path('ucustomerlogin/',ucustomerlogin),
+path('uproducts/',uproducts),
+path('uservices/',uservices),
+path('uorder/',uorder),
+path('SM/',sendSimpleEmail),
+path('getotp/',getotp),
+path('cpass/',cpass),
+path('changepass/',changepass),
+path('uorders/',uorders),
+path('search/',search),
+path('msearch/',msearch),
+path('searches/',searches),
+path('usearch/',usearch)
+]
+urlpatterns+=staticfiles_urlpatterns()
+urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
