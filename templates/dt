@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'dt.css' %}" />
+    <p>WelcometoDjango</p>
+    <h4>ServerTimeis{{dt}}</h4>
+    {%if name%}
+    <h3>Nameis{{name|upper}}</h3>
+    {%else%}
+    <h3>Anonymous</h3>
+    {%endif%}
+    <ol>
+        {%for t in subjects%}
+        <li>{{t}}</li>
+        {%endfor%}
+    </ol>
+</body>
+
+</html>
