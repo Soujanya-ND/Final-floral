@@ -1,0 +1,57 @@
+{% extends "navbar.html" %} {% block content %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Products&services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'products.css' %}"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+
+
+        $.get("http://localhost:8000/uproducts/", {}).done(function(data) {
+
+
+            $("#res").html(data)
+
+        });
+    });
+</script>
+
+<body class="bg-img1 background-image:url({% static 'img\1.jpg' %});">
+
+    <header>
+        <h1>FLOWER PRODUCTS IN STOCK</h1>
+        <h5>want to avail our services ?</h5>
+        <a href="http://localhost:8000/services">
+            <button class="btn">SERVICES</button>
+        </a>
+        <!-- <form method="get" action="/search">
+            <input name="search" id="search" type="search " placeholder="search ">
+            <button class="btn" type="submit" style="left:150px; ">SEARCH</button>
+        </form> -->
+    </header>
+
+    <div id="res" class="grid-container">
+        <div class="card " id="cd ">
+
+            <img src="{% static 'img/1.jpg' %} " class="bg-img" width="100% ">
+            <div class="content ">
+                <h4>TULIP</h4>
+                <p>Price of each flower = <span style="color: red; font-weight: bold; "></span></p>
+                <input id="quantity " type="integer " placeholder="Quantity ">
+                <button id="btn ">BUY</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+{% endblock %}
