@@ -1,0 +1,55 @@
+{% extends "navbar.html" %} {% block title %} {% endblock %} {% block content %} {% load static %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'search.css' %}" />
+</head>
+
+<body class="bg-img1 background-image:url({% static 'img\1.jpg' %});">
+    <div class="new">
+        <div class="w3-container w3-transparent" style="width: 70%;margin-left:5% ;">
+            <h1 class="sear">Search The Flower :</h1>
+        </div>
+        <form id="hel" class="w3-contaier w3-" style="width: 70%;margin-left:5% ;">
+            <div class="w3-row-padding">
+
+                <input class='wel' type="text" placeholder="Enter Flower name" id="productname">
+
+            </div>
+            <div class="w3-third">
+                <button type="submit" class="btn" id="ser">
+                            <span class="glyphicon glyphicon-search"></span>Search</button>
+
+                <button formaction="http://localhost:8000/searches/" style="width:280px;right:250px;" class="btn" id="ser">Search service</button>
+            </div>
+    </div>
+    </div>
+
+    </form>
+    <div class="w3-container" style="width: 90%;margin-left:0%;" id="res">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#ser").click(function(e) {
+                e.preventDefault();
+                productname = $('#productname').val()
+                $.get("http://localhost:8000/msearch/", {
+                    productname: productname
+                }).done(function(data) {
+
+                    $('#res').html(data)
+                })
+
+            })
+
+        });
+    </script>
+
+
+</body>
+
+</html>
+<br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br> {% endblock %}

@@ -1,0 +1,46 @@
+{% extends "navbar.html" %} {% block content %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'services.css' %}"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+
+        $.get("http://localhost:8000/uservices/", {}).done(function(data) {
+
+            $("#fes").html(data)
+        });
+    });
+</script>
+
+<body class="bg-img1 background-image:url({% static 'img\bgp.jpg' %});">
+
+    <header>
+        <h1>SERVICES AVAILABLE</h1>
+        <h5>want to buy our products?</h5>
+        <a href="http://localhost:8000/products">
+            <button class="btn">PRODUCTS</button>
+        </a>
+    </header>
+    <div id="fes" class="grid-container">
+        <div class="cards">
+
+            <img src="{% static 'img/s/1.jpg' %}" class="bg-img" width="100%">
+            <div class="content">
+                <h4>bouquet</h4>
+                <p>Price starts from = <span style="color: red; font-weight: bold;">150</span></p>
+                <button>BUY</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}
