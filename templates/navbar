@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img\icons.png' %}" type="image/x-icon "></link>
+    <link rel="stylesheet " type="text/css " href="{% static 'navbar.css' %} "></link>
+
+</head>
+
+<body>
+
+
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="/index">HOME</a>
+            </li>
+
+            <li>
+                <a href="/orderdetails">ORDER DETAILS</a>
+            </li>
+
+            <li> <a href="/products">SERVICES AND PRODUCTS</a>
+            </li>
+
+            <li>
+                <a href="/search">Search</a>
+            </li>
+
+            <li>
+                <a href="http://localhost:8000/customerlogin/">LOGOUT</a>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="body-content">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
