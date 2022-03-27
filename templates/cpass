@@ -1,0 +1,88 @@
+ {% block content %} {% load static %}
+<!DOCTYPE html>
+<html>
+<title>Change of Password</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="{% static 'cpass.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    /* $.ajaxSetup({ headers:{ 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') });*/
+
+    $(document).ready(function() {
+        $("#b1").click(function() {
+            email = $("#email").val();
+            $.get("http://localhost:8000/getotp", {
+                email: email
+            }).done(function(data) {
+                alert("OTP sent to registered email")
+            });
+
+        });
+        $("#f").submit(function(e) {
+            e.preventDefault();
+            email = $("#email").val();
+            rotp = $("#rotp").val();
+            npsw = $("#npsw").val()
+                //alert(tit)
+            $.get("http://localhost:8000/changepass", {
+                email: email,
+                rotp: rotp,
+                npsw: npsw
+            }).done(function(data) {
+                alert(data)
+            });
+        });
+    });
+</script>
+
+<body class="bg-img background-image:url({% static 'img\bgc.jpg' %});">
+    <div class="flex-container" id="subs">
+        <div class="hello">
+            <img src="{% static 'img/hi-dribbble-studiotale.gif' %}" class="bear">
+        </div>
+        <div class="login">
+
+            <h2 class="pass">Click on the Button to Reset Password </h2>
+            <button onclick="document.getElementById('id01').style.display='block' " class="button">Change Password</button>
+            <a href="http://localhost:8000/customerlogin/">
+                <button style="bottom:50px; margin-top: 25px;" class="button">Back to login
+                    
+                </button></a>
+
+            <div id="id01" class="w3-modal" style="padding-top: 0px;width: 1130px;height: 700px; ">
+                <div id="dd" class="w3-modal-content w3-card-4 w3-animate-zoom w3-hide-small" style="max-width:600px">
+
+                    <div class="w3-center"><br>
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                        <img src="{% static 'img\avatar.jpg' %}" alt="Avatar" style="height:20%; width:30%" class="w3-circle w3-margin-top">
+                    </div>
+
+                    <form class="w3-container" action="/action_page.php" id="f">
+                        <div class="w3-section">
+                            <label style="color:rgb(255, 255, 255)"><b>Username</b></label>
+                            <input style="margin:5px;border-radius: 5px;" class=" w3-input w3-border w3-margin-bottom" type="email" placeholder="Enter Registered Email ID " name="email" id="email" required>
+                            <button class="w3-button w3-block w3-grey w3-section w3-padding" type="button" id="b1">GET OTP</button>
+                            <label style="color:rgb(255, 255, 255) "><b>OTP</b></label>
+                            <input class="w3-input w3-border" type="text" placeholder="Enter OTP received" name="rotp" id="rotp" required>
+                            <label style="color:rgb(241, 242, 243)"><b>Password</b></label>
+                            <input class="w3-input w3-border" type="password" placeholder="Enter New Password" name="npsw" id="npsw" required>
+                            <button class="w3-button w3-block w3-grey w3-section w3-padding" type="submit">Change Password</button>
+
+                        </div>
+                    </form>
+
+                    <div class="w3-container w3-padding-16 ">
+                        <button onclick="document.getElementById( 'id01').style.display='none' " type="button " class="w3-button w3-red ">Cancel</button>
+                        <span style="color:antiquewhite " class="w3-right w3-padding w3-hide-small ">Forgot <a href="# ">password?</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}
